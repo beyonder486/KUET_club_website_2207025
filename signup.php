@@ -32,16 +32,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   </head>
   <body>
     <header>
-      <h1>KUET Career Club</h1>
+      <div class="brand">
+        <span class="logo">KUET Career Club</span>
+      </div>
       <nav>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="signup.php">Sign Up</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
         </ul>
       </nav>
+      <a class="header-cta nav-active" href="signup.php">Sign Up</a>
     </header>
     <main>
       <section id="signup">

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - KUET Career Club</title>
+    <meta name="description" content="Log in to your KUET Career Club account to access events, resources, and your member dashboard." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="logo">KUET Career Club</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html" class="nav-active">Login</a></li>
+        </ul>
+      </nav>
+      <a class="header-cta" href="signup.php">Sign Up</a>
+    </header>
+
+    <main class="auth-main">
+      <div class="auth-card">
+        <div class="auth-header">
+          <div class="auth-logo">KCC</div>
+          <h1 class="auth-title">Welcome back</h1>
+          <p class="auth-subtitle">Log in to your KUET Career Club account</p>
+        </div>
+
+        <form class="auth-form" id="loginForm" action="#" method="POST">
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@kuet.ac.bd" required />
+          </div>
+
+          <div class="form-group">
+            <div class="form-label-row">
+              <label for="password">Password</label>
+              <a href="#" class="form-link">Forgot password?</a>
+            </div>
+            <div class="input-wrapper">
+              <input type="password" id="password" name="password" placeholder="Enter your password" required />
+              <button type="button" class="toggle-password" id="togglePassword" aria-label="Show password">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="form-check">
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            <label for="rememberMe">Remember me for 30 days</label>
+          </div>
+
+          <button type="submit" class="btn btn-primary auth-submit">Log In</button>
+        </form>
+
+        <div class="auth-divider"><span>or</span></div>
+
+        <p class="auth-footer-text">
+          Don't have an account? <a href="signup.php" class="form-link">Sign up for free</a>
+        </p>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <div>
+          <h3>About us</h3>
+          <ul>
+            <li><a href="about.html">Team</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="about.html">Our values</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Navigate</h3>
+          <ul>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; 2026 KUET Career Club. All rights reserved.</p>
+    </footer>
+
+    <script>
+      const togglePassword = document.getElementById('togglePassword');
+      const passwordInput  = document.getElementById('password');
+      togglePassword.addEventListener('click', () => {
+        const isText = passwordInput.type === 'text';
+        passwordInput.type = isText ? 'password' : 'text';
+        togglePassword.innerHTML = isText
+          ? `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>`
+          : `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.94 17.94A10.07 10.07 0 0112 20c-7 0-11-8-11-8a18.45 18.45 0 015.06-5.94"/><path d="M9.9 4.24A9.12 9.12 0 0112 4c7 0 11 8 11 8a18.5 18.5 0 01-2.16 3.19"/><line x1="1" y1="1" x2="23" y2="23"/></svg>`;
+      });
+    </script>
+  </body>
+</html>
