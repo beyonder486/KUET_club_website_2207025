@@ -1,6 +1,5 @@
 <?php
-require_once 'db_config.php';
-session_start();
+require_once 'session_config.php';
 
 $success_message = "";
 $error_message = "";

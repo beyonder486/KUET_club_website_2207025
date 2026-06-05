@@ -1,6 +1,5 @@
 <?php
-require_once 'db_config.php';
-session_start();
+require_once 'session_config.php';
 
 // If already logged in, redirect
 if (isset($_SESSION['user_id'])) {
@@ -25,6 +24,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $_SESSION['user_id']   = $user['id'];
             $_SESSION['user_name'] = $user['name'];
             $_SESSION['user_role'] = $user['role'];
+            session_regenerate_id(true); // prevent session fixation
+
+            // Set "Remember Me" cookie if checked
+            if (!empty($_POST['remember_me'])) {
+                setRememberMeCookie($pdo, (int)$user['id']);
+            }
+
             header("Location: dashboard.php");
             exit;
         } else {
@@ -70,6 +76,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
               </button>
             </div>
+          </div>
+
+          <div class="form-group form-check-group">
+            <label class="checkbox-label" for="remember_me">
+              <input type="checkbox" id="remember_me" name="remember_me" value="1" />
+              <span>Remember me for 30 days</span>
+            </label>
           </div>
 
           <button type="submit" class="btn btn-primary auth-submit">Log In</button>

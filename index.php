@@ -1,4 +1,4 @@
-<?php session_start(); ?>
+<?php require_once 'session_config.php'; ?>
 <!doctype html>
 <html lang="en">
   <head>

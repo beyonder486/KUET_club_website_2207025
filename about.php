@@ -1,0 +1,77 @@
+<?php require_once 'session_config.php'; ?>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About - KUET Career Club</title>
+    <meta name="description" content="Learn about KUET Career Club — our mission, values, and the team behind the club." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <?php include 'includes/header.php'; ?>
+    <main>
+      <section class="about-hero">
+        <span class="eyebrow">🎓 Who We Are</span>
+        <h1>Building Careers,<br>One Step at a Time</h1>
+        <p>KUET Career Club is a student-led organization dedicated to helping KUET students navigate their professional journeys — from first internship to dream job.</p>
+      </section>
+
+      <div class="stats-row">
+        <div class="stat-item"><span class="num">2019</span><span>Founded</span></div>
+        <div class="stat-item"><span class="num">500+</span><span>Members</span></div>
+        <div class="stat-item"><span class="num">24+</span><span>Events/Year</span></div>
+        <div class="stat-item"><span class="num">80%</span><span>Placement Rate</span></div>
+      </div>
+
+      <section class="values-section">
+        <p class="section-label">Our Values</p>
+        <div class="values-grid">
+          <div class="value-card"><div class="value-icon">🤝</div><h3>Community</h3><p>We believe careers are built on relationships. We foster a supportive network where every student feels welcome and empowered.</p></div>
+          <div class="value-card"><div class="value-icon">📚</div><h3>Learning</h3><p>Continuous growth is at our core. From workshops to mentorship, we create opportunities to keep learning beyond the classroom.</p></div>
+          <div class="value-card"><div class="value-icon">🚀</div><h3>Ambition</h3><p>We set high goals and help our members reach them. Whether it's a local job or an international role, we support every aspiration.</p></div>
+          <div class="value-card"><div class="value-icon">🌍</div><h3>Inclusion</h3><p>We welcome students from every department and background. Diversity of thought makes our community stronger and more innovative.</p></div>
+        </div>
+      </section>
+
+      <section class="story-section">
+        <div class="story-text">
+          <p class="section-label">Our Story</p>
+          <h2>From a Small Group to a Thriving Community</h2>
+          <p>KUET Career Club was founded in 2019 by a small group of final-year students who felt there was no structured support for career development on campus. What started as informal resume-review sessions in the library grew into a full-fledged club with hundreds of members.</p>
+          <p>Today, we host career fairs that attract 20+ companies, run year-round workshops, and maintain an active alumni network spanning 15+ countries.</p>
+        </div>
+        <div class="story-visual">
+          <div class="story-card">
+            <div class="story-card-inner"><span class="story-year">2019</span><span class="story-milestone">Club Founded</span></div>
+            <div class="story-card-inner"><span class="story-year">2021</span><span class="story-milestone">First Career Fair</span></div>
+            <div class="story-card-inner"><span class="story-year">2023</span><span class="story-milestone">500+ Members</span></div>
+            <div class="story-card-inner"><span class="story-year">2026</span><span class="story-milestone">20+ Partner Companies</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="team-section">
+        <p class="section-label">Executive Committee 2025–26</p>
+        <div class="team-grid">
+          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#3b83ff,#2bd4ff);">AR</div><div class="team-info"><h3>Ahnaf Rahman</h3><span class="team-role">President</span><p>CSE, Year 4 · Passionate about SWE and community building.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
+          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#7c3aed,#c084fc);">TI</div><div class="team-info"><h3>Tasnim Islam</h3><span class="team-role">Vice President</span><p>EEE, Year 4 · Focused on bridging academia and industry.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
+          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#059669,#34d399);">MH</div><div class="team-info"><h3>Mahbub Hasan</h3><span class="team-role">General Secretary</span><p>ME, Year 3 · Organizer of events and club operations.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
+          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#dc2626,#fb923c);">FA</div><div class="team-info"><h3>Fariha Akter</h3><span class="team-role">Events Coordinator</span><p>CSE, Year 3 · Leads workshops and seminar planning.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
+          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#0891b2,#67e8f9);">RK</div><div class="team-info"><h3>Rafiul Karim</h3><span class="team-role">Technical Lead</span><p>CSE, Year 3 · Manages the club website and digital resources.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
+          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#b45309,#fbbf24);">SA</div><div class="team-info"><h3>Sumaiya Ahmed</h3><span class="team-role">PR &amp; Outreach</span><p>ECE, Year 2 · Handles social media and alumni relations.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
+        </div>
+      </section>
+
+      <section class="about-cta">
+        <h2>Ready to Join Us?</h2>
+        <p>Become a member and get access to exclusive events, resources, and a community of ambitious KUET students.</p>
+        <div class="hero-actions" style="justify-content:center;">
+          <a href="signup.php" class="btn btn-primary">Join the Club</a>
+          <a href="contact.php" class="btn btn-secondary">Get in Touch</a>
+        </div>
+      </section>
+    </main>
+    <?php include 'includes/footer.php'; ?>
+  </body>
+</html>
