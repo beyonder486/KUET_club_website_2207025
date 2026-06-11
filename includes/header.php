@@ -2,8 +2,9 @@
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-$logged_in = isset($_SESSION['user_id']);
-$user_name = $logged_in ? $_SESSION['user_name'] : '';
+$logged_in  = isset($_SESSION['user_id']);
+$user_name  = $logged_in ? $_SESSION['user_name'] : '';
+$user_role  = $logged_in ? ($_SESSION['user_role'] ?? 'member') : '';
 $current_page = basename($_SERVER['PHP_SELF'], '.php');
 ?>
 <header>
@@ -19,6 +20,9 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php');
       <li><a href="contact.php" <?php echo $current_page === 'contact' ? 'class="nav-active"' : ''; ?>>Contact</a></li>
       <?php if ($logged_in): ?>
         <li><a href="dashboard.php" <?php echo $current_page === 'dashboard' ? 'class="nav-active"' : ''; ?>>Dashboard</a></li>
+        <?php if ($user_role === 'admin'): ?>
+          <li><a href="admin.php" style="color:#ff8080;" <?php echo $current_page === 'admin' ? 'class="nav-active"' : ''; ?>>Admin</a></li>
+        <?php endif; ?>
       <?php else: ?>
         <li><a href="login.php" <?php echo $current_page === 'login' ? 'class="nav-active"' : ''; ?>>Login</a></li>
       <?php endif; ?>

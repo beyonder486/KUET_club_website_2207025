@@ -65,14 +65,17 @@
       <section id="testimonials" class="testimonials">
         <div class="testimonials-container">
           <div class="testimonial">
+            <img class="testimonial-avatar" src="flat-design-young-person-avatar-profile-round-circle-icon-vector.jpg" alt="John Doe">
             <p>"KUET Career Club transformed my career path. The workshops and mentorship were invaluable."</p>
             <cite>- John Doe, Software Engineer</cite>
           </div>
           <div class="testimonial">
+            <img class="testimonial-avatar" src="flat-design-young-person-avatar-profile-round-circle-icon-vector.jpg" alt="Jane Smith">
             <p>"Amazing community! I gained skills and connections that led to my dream job."</p>
             <cite>- Jane Smith, Data Scientist</cite>
           </div>
           <div class="testimonial">
+            <img class="testimonial-avatar" src="flat-design-young-person-avatar-profile-round-circle-icon-vector.jpg" alt="Alex Johnson">
             <p>"The resources provided are top-notch. Highly recommend to all students."</p>
             <cite>- Alex Johnson, Product Manager</cite>
           </div>
