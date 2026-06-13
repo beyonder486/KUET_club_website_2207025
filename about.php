@@ -1,4 +1,10 @@
-<?php require_once 'session_config.php'; ?>
+<?php
+require_once 'session_config.php';
+require_once 'db_config.php';
+
+$memberQuery = $pdo->query("SELECT name, email, student_id, role, created_at FROM users ORDER BY created_at DESC");
+$registeredMembers = $memberQuery->fetchAll();
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -52,14 +58,25 @@
       </section>
 
       <section class="team-section">
-        <p class="section-label">Executive Committee 2025–26</p>
-        <div class="team-grid">
-          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#3b83ff,#2bd4ff);">AR</div><div class="team-info"><h3>Ahnaf Rahman</h3><span class="team-role">President</span><p>CSE, Year 4 · Passionate about SWE and community building.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
-          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#7c3aed,#c084fc);">TI</div><div class="team-info"><h3>Tasnim Islam</h3><span class="team-role">Vice President</span><p>EEE, Year 4 · Focused on bridging academia and industry.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
-          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#059669,#34d399);">MH</div><div class="team-info"><h3>Mahbub Hasan</h3><span class="team-role">General Secretary</span><p>ME, Year 3 · Organizer of events and club operations.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
-          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#dc2626,#fb923c);">FA</div><div class="team-info"><h3>Fariha Akter</h3><span class="team-role">Events Coordinator</span><p>CSE, Year 3 · Leads workshops and seminar planning.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
-          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#0891b2,#67e8f9);">RK</div><div class="team-info"><h3>Rafiul Karim</h3><span class="team-role">Technical Lead</span><p>CSE, Year 3 · Manages the club website and digital resources.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
-          <div class="team-card"><div class="team-avatar" style="background:linear-gradient(135deg,#b45309,#fbbf24);">SA</div><div class="team-info"><h3>Sumaiya Ahmed</h3><span class="team-role">PR &amp; Outreach</span><p>ECE, Year 2 · Handles social media and alumni relations.</p><div class="team-links"><a href="#" class="team-link">in</a><a href="#" class="team-link">gh</a></div></div></div>
+        <p class="section-label">Registered Members</p>
+        <div class="team-grid" id="team-grid">
+          <?php foreach ($registeredMembers as $member): ?>
+            <?php
+              $displayRole = $member['role'] === 'admin' ? 'Admin' : 'Member';
+              $label = $member['role'] === 'admin' ? 'admin' : 'member';
+              $city = 'kuet';
+            ?>
+            <div class="team-card" data-name="<?php echo htmlspecialchars($member['name']); ?>" data-city="<?php echo htmlspecialchars($city); ?>" data-type="<?php echo htmlspecialchars($label); ?>">
+              <div class="team-avatar">
+                <img src="flat-design-young-person-avatar-profile-round-circle-icon-vector.jpg" alt="<?php echo htmlspecialchars($member['name']); ?>" />
+              </div>
+              <div class="team-info">
+                <h3><?php echo htmlspecialchars($member['name']); ?></h3>
+                <span class="team-role"><?php echo htmlspecialchars($displayRole); ?></span>
+                <p><?php echo htmlspecialchars($member['email']); ?> · ID: <?php echo htmlspecialchars($member['student_id']); ?></p>
+              </div>
+            </div>
+          <?php endforeach; ?>
         </div>
       </section>
 

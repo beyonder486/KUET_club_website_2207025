@@ -14,14 +14,14 @@
       <section id="hero" class="hero">
         <div class="hero-grid">
           <div class="hero-copy">
-            <span class="eyebrow">🚀 Launch Your Career</span>
+            <span class="eyebrow">  Launch Your Career</span>
             <h1>Build Your Future with KUET Career Club</h1>
             <p>
               Join 500+ members connecting with mentors, landing dream roles, and mastering industry skills. From exclusive workshops to direct recruiter access—your success starts here.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="signup.php">✨ Get Started Free</a>
-              <a class="btn btn-secondary" href="events.php">📅 View Events</a>
+              <a class="btn btn-primary" href="signup.php"> Get Started Free</a>
+              <a class="btn btn-secondary" href="events.php"> View Events</a>
             </div>
           </div>
           <div class="hero-visual">
